@@ -49,20 +49,27 @@ public class Prompt
 	 */
 	public static char getChar (String ask)
 	{
+		boolean found = false;
+		int input = 0;
+		char letter = ' ';
 		System.out.print(ask + " - > ");
 		
-		char letter = 0;
-		boolean isChar = false;
-		while (! isChar) {
-			String str = getString(ask);
-			try {
-				if(length == 1){
-					letter = str.charAt(0);
-					isChar = true;
+		while(! found) {
+		try {
+				input = bufReader.read();
+				
+				if (input == '\n' || input == '\r') {
+                    continue;
+                } else if(122 >= input && input >= 65) {
+					letter = (char)input;
+					found = true;
+				} else {
+					found = false;
+					System.out.print(ask + " - > ");
 				}
-			}
-			catch (IOException e) {
-				isChar = false;
+			
+			} catch (IOException e) {
+			System.err.println("ERROR: BufferedReader could not read character");	
 			}
 		}
 		return letter;

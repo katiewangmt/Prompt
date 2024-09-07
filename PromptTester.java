@@ -6,20 +6,20 @@
 public class PromptTester {
 
 	public static void main(String[] args) {
-		String str = Prompt.getString("Provide me a string");
-		System.out.println("Here it is -> " + str);
+		//String str = Prompt.getString("Provide me a string");
+		//System.out.println("Here it is -> " + str);
 		
-		int a = Prompt.getInt("Give me an integer");
-		System.out.println("Here it is -> " + a);
+		//int a = Prompt.getInt("Give me an integer");
+		//System.out.println("Here it is -> " + a);
 		
-		a = Prompt.getInt("Give me an integer", 20, 40);
-		System.out.println("Here it is -> " + a);
+		//a = Prompt.getInt("Give me an integer", 20, 40);
+		//System.out.println("Here it is -> " + a);
 		
-		double d = Prompt.getDouble("Give me a double");
-		System.out.println("Here it is -> " + d);
+		//double d = Prompt.getDouble("Give me a double");
+		//System.out.println("Here it is -> " + d);
 		
-		d = Prompt.getDouble("Give me a double", 20, 40);
-		System.out.println("Here it is -> " + d);
+		//d = Prompt.getDouble("Give me a double", 20, 40);
+		//System.out.println("Here it is -> " + d);
 		
 		char c = Prompt.getChar("Give me a character");
 		System.out.println("Here it is -> " + c);
